@@ -4,8 +4,8 @@
 
 Cualquier duda, pueden contactarme... 
 
-busquenme en sus redes sociales con el usuario #@cdelgado1978, 
+busquenme en sus redes sociales con el usuario ##@cdelgado1978, 
 
-Siganme en #FB, Twitter o Linkedin.
+Siganme en ##FB, Twitter o Linkedin.
 
 
