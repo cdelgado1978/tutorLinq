@@ -1,0 +1,14 @@
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\bin\Debug\PracticaBiblioteca.exe.config
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\bin\Debug\PracticaBiblioteca.exe
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\bin\Debug\PracticaBiblioteca.pdb
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\bin\Debug\PracticaBiblioteca.xml
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.vbprojAssemblyReference.cache
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.Form1.resources
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.Resources.resources
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.vbproj.GenerateResource.cache
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.vbproj.CoreCompileInputs.cache
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.exe
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.xml
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.pdb
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.frmBuscar.resources
+D:\Fuentes\Tutor\PracticaBiblioteca\PracticaBiblioteca\obj\Debug\PracticaBiblioteca.frmLibros.resources

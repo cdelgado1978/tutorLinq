@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="biblio" Class="biblioDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=biblio;Integrated Security=True" SettingsObjectName="PracticaBiblioteca.My.MySettings" SettingsPropertyName="biblioConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.autor" Member="autors">
+    <Type Name="autor">
+      <Column Name="autorId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Association Name="autor_Libro" Member="Libros" ThisKey="autorId" OtherKey="autorId" Type="Libro" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Libro_lector" Member="Libro_lectors">
+    <Type Name="Libro_lector">
+      <Column Name="libroId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="lectorId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="lector_Libro_lector" Member="lector" ThisKey="lectorId" OtherKey="lectorId" Type="lector" IsForeignKey="true" />
+      <Association Name="Libro_Libro_lector" Member="Libro" ThisKey="libroId" OtherKey="libroId" Type="Libro" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.genero" Member="generos">
+    <Type Name="genero">
+      <Column Name="generoId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="genero_Libro" Member="Libros" ThisKey="generoId" OtherKey="generoId" Type="Libro" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lector" Member="lectors">
+    <Type Name="lector">
+      <Column Name="lectorId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="lector_Libro_lector" Member="Libro_lectors" ThisKey="lectorId" OtherKey="lectorId" Type="Libro_lector" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Libro" Member="Libros">
+    <Type Name="Libro">
+      <Column Name="libroId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="titulo" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaPublicacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="autorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="generoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Libro_Libro_lector" Member="Libro_lectors" ThisKey="libroId" OtherKey="libroId" Type="Libro_lector" />
+      <Association Name="autor_Libro" Member="autor" ThisKey="autorId" OtherKey="autorId" Type="autor" IsForeignKey="true" />
+      <Association Name="genero_Libro" Member="genero" ThisKey="generoId" OtherKey="generoId" Type="genero" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
