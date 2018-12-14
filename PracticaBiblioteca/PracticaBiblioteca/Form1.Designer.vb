@@ -31,7 +31,7 @@ Partial Class Form1
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.gridLibros = New System.Windows.Forms.DataGridView()
         Me.LibroIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TituloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaPublicacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,7 +41,7 @@ Partial Class Form1
         Me.GeneroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LibroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.gridLibros,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.LibroBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
         Me.Panel1.SuspendLayout
         Me.SuspendLayout
@@ -116,18 +116,18 @@ Partial Class Form1
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = true
         '
-        'DataGridView1
+        'gridLibros
         '
-        Me.DataGridView1.AutoGenerateColumns = false
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LibroIdDataGridViewTextBoxColumn, Me.TituloDataGridViewTextBoxColumn, Me.FechaPublicacionDataGridViewTextBoxColumn, Me.AutorIdDataGridViewTextBoxColumn, Me.GeneroIdDataGridViewTextBoxColumn, Me.AutorDataGridViewTextBoxColumn, Me.GeneroDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.LibroBindingSource
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(695, 241)
-        Me.DataGridView1.TabIndex = 9
+        Me.gridLibros.AutoGenerateColumns = false
+        Me.gridLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridLibros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.LibroIdDataGridViewTextBoxColumn, Me.TituloDataGridViewTextBoxColumn, Me.FechaPublicacionDataGridViewTextBoxColumn, Me.AutorIdDataGridViewTextBoxColumn, Me.GeneroIdDataGridViewTextBoxColumn, Me.AutorDataGridViewTextBoxColumn, Me.GeneroDataGridViewTextBoxColumn})
+        Me.gridLibros.DataSource = Me.LibroBindingSource
+        Me.gridLibros.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gridLibros.Location = New System.Drawing.Point(0, 0)
+        Me.gridLibros.Name = "gridLibros"
+        Me.gridLibros.RowTemplate.Height = 24
+        Me.gridLibros.Size = New System.Drawing.Size(695, 241)
+        Me.gridLibros.TabIndex = 9
         '
         'LibroIdDataGridViewTextBoxColumn
         '
@@ -177,7 +177,7 @@ Partial Class Form1
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.gridLibros)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 274)
         Me.Panel1.Name = "Panel1"
@@ -200,7 +200,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.gridLibros,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.LibroBindingSource,System.ComponentModel.ISupportInitialize).EndInit
         Me.Panel1.ResumeLayout(false)
         Me.ResumeLayout(false)
@@ -223,7 +223,7 @@ End Sub
     Friend WithEvents GeneroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LibroBindingSource As BindingSource
     Friend WithEvents Panel1 As Panel
-    Friend Shared WithEvents DataGridView1 As DataGridView
-    Friend Shared WithEvents txtNombre As TextBox
-    Friend Shared WithEvents lblAutorID As Label
+    Friend  WithEvents gridLibros As DataGridView
+    Friend  WithEvents txtNombre As TextBox
+    Friend  WithEvents lblAutorID As Label
 End Class

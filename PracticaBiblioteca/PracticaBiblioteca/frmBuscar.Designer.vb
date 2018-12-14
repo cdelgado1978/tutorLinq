@@ -23,29 +23,44 @@ Partial Class frmBuscar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.gridAutores = New System.Windows.Forms.DataGridView()
         Me.AutorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LibrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LibrosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.autorId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.gridAutores,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.AutorBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.LibrosBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.LibrosBindingSource1,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
         '
-        'DataGridView1
+        'gridAutores
         '
-        Me.DataGridView1.AutoGenerateColumns = false
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.autorId, Me.NombreDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.AutorBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(523, 251)
-        Me.DataGridView1.TabIndex = 0
+        Me.gridAutores.AutoGenerateColumns = false
+        Me.gridAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridAutores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.autorId, Me.NombreDataGridViewTextBoxColumn})
+        Me.gridAutores.DataSource = Me.AutorBindingSource
+        Me.gridAutores.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gridAutores.Location = New System.Drawing.Point(0, 0)
+        Me.gridAutores.Name = "gridAutores"
+        Me.gridAutores.RowTemplate.Height = 24
+        Me.gridAutores.Size = New System.Drawing.Size(545, 272)
+        Me.gridAutores.TabIndex = 0
         '
         'AutorBindingSource
         '
         Me.AutorBindingSource.DataSource = GetType(PracticaBiblioteca.autor)
+        '
+        'LibrosBindingSource
+        '
+        Me.LibrosBindingSource.DataMember = "Libros"
+        Me.LibrosBindingSource.DataSource = Me.AutorBindingSource
+        '
+        'LibrosBindingSource1
+        '
+        Me.LibrosBindingSource1.DataMember = "Libros"
+        Me.LibrosBindingSource1.DataSource = Me.AutorBindingSource
         '
         'autorId
         '
@@ -58,24 +73,27 @@ Partial Class frmBuscar
         Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
         Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
         Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.Width = 300
         '
         'frmBuscar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8!, 16!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(545, 272)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.gridAutores)
         Me.Name = "frmBuscar"
         Me.Text = "frmBuscar"
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.gridAutores,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.AutorBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.LibrosBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.LibrosBindingSource1,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
 
 End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents gridAutores As DataGridView
     Friend WithEvents AutorBindingSource As BindingSource
+    Friend WithEvents LibrosBindingSource As BindingSource
+    Friend WithEvents LibrosBindingSource1 As BindingSource
     Friend WithEvents autorId As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
